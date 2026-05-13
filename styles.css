@@ -91,6 +91,20 @@ nav .container { display: flex; align-items: center; justify-content: space-betw
 .about h2 { font-size: 1.6rem; margin-bottom: 16px; }
 .about p { color: var(--text-muted); margin-bottom: 12px; }
 
+/* ===== Disclaimer ===== */
+.disclaimer { padding: 60px 0; border-bottom: 1px solid var(--border); }
+.disclaimer h2 { font-size: 1.6rem; margin-bottom: 20px; }
+.disclaimer-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--text-muted);
+  border-radius: 8px;
+  padding: 24px 28px;
+}
+.disclaimer-box p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px; }
+.disclaimer-box p:last-child { margin-bottom: 0; }
+.disclaimer-box strong { color: var(--text); font-weight: 600; }
+
 /* ===== Footer ===== */
 footer {
   padding: 32px 0;
