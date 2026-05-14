@@ -59,9 +59,9 @@ nav .container { display: flex; align-items: center; justify-content: space-betw
   padding: 14px 28px;
   border-radius: 8px;
   font-size: 1rem; font-weight: 600;
-  transition: background 0.2s;
+  cursor: default;
+  opacity: 0.75;
 }
-.btn-store:hover { background: var(--accent-hover); color: #fff; text-decoration: none; }
 .btn-store svg { flex-shrink: 0; }
 
 .platform-note {
