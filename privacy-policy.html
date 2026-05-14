@@ -38,16 +38,16 @@
         </ul>
 
         <h2>2. Disclaimer Acceptance Log</h2>
-        <p>On first use, the App displays a research disclaimer that must be acknowledged before the App can be used. When you click "I Understand," the following information is transmitted to and stored in our private database (hosted by Supabase on AWS):</p>
+        <p>The App displays a research disclaimer that must be acknowledged before the App can be used. The first time each account accepts the disclaimer (and again if the disclaimer is updated), the following information is transmitted to and stored in our private database (hosted by Supabase on AWS):</p>
         <ul>
           <li>Your name and email address (as entered during App setup)</li>
           <li>The date and time of acceptance</li>
           <li>The App version and disclaimer version number</li>
         </ul>
-        <p>This record is retained for compliance purposes and is not shared with any third party. It is accessible only to the developer. The database is configured so that this information cannot be read, modified, or deleted by any external party — only the developer has read access. Data is transmitted over HTTPS.</p>
+        <p>This record is retained for compliance purposes and is not shared with any third party. The database is configured so that stored records cannot be read, modified, or deleted by any external party — only the developer has access. Data is transmitted over HTTPS.</p>
 
         <h2>3. Data the App Fetches from Third Parties</h2>
-        <p>SATWIP queries the U.S. Securities and Exchange Commission's publicly available EDGAR API to retrieve financial filing data. This is a one-way, read-only request to a public government database. Your identity is not transmitted to EDGAR as part of these requests; only the specific financial data query (e.g., a company ticker or CIK number) is sent as part of the API call.</p>
+        <p>SATWIP queries the U.S. Securities and Exchange Commission's publicly available EDGAR API to retrieve financial filing data. As required by the SEC's fair-use policy, SATWIP sends the name and email address you configure as your SEC API Identity as a <code>User-Agent</code> header with each EDGAR request. Your SEC API Identity may be the same as your account name and email or different — you configure it separately in the app. No other personal information is transmitted to EDGAR.</p>
         <p>SATWIP also queries third-party market data providers (including Yahoo Finance and Nasdaq) to retrieve share price and market capitalisation data. These requests do not include your name or email address.</p>
         <p>The SEC's own privacy and data policies govern the EDGAR API. You can review those at <a href="https://www.sec.gov/privacy" target="_blank" rel="noopener">www.sec.gov/privacy</a>.</p>
 
