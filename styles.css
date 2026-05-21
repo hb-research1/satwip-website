@@ -59,8 +59,14 @@ nav .container { display: flex; align-items: center; justify-content: space-betw
   padding: 14px 28px;
   border-radius: 8px;
   font-size: 1rem; font-weight: 600;
-  cursor: default;
-  opacity: 0.75;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.btn-store:hover {
+  background: var(--accent-hover);
+  color: #fff;
+  text-decoration: none;
+  transform: scale(1.04);
 }
 .btn-store svg { flex-shrink: 0; }
 
