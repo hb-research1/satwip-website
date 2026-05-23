@@ -39,7 +39,7 @@
         </ul>
 
         <h2>2. Disclaimer Acceptance Log</h2>
-        <p>The App displays a research disclaimer that must be acknowledged before the App can be used. The first time each account accepts the disclaimer (and again if the disclaimer is updated), the following information is transmitted to and stored in our private database (hosted by Supabase on AWS):</p>
+        <p>The App displays a disclaimer that must be acknowledged before the App can be used. The first time each account accepts the disclaimer (and again if the disclaimer is updated), the following information is transmitted to and stored in our private database (hosted by Supabase on AWS):</p>
         <ul>
           <li>Your name and email address (as entered during App setup)</li>
           <li>The date and time of acceptance</li>
@@ -49,7 +49,7 @@
 
         <h2>3. Data the App Fetches from Third Parties</h2>
         <p>SATWIP queries the U.S. Securities and Exchange Commission's publicly available EDGAR API to retrieve financial filing data. As required by the SEC's fair-use policy, SATWIP sends the name and email address you configure as your SEC API Identity as a <code>User-Agent</code> header with each EDGAR request. Your SEC API Identity may be the same as your account name and email or different — you configure it separately in the App. No other personal information is transmitted to EDGAR.</p>
-        <p>SATWIP also queries third-party market data providers (including Yahoo Finance and Nasdaq) to retrieve share price and market capitalisation data. These requests include only ticker symbols — publicly-traded security identifiers that do not constitute personal information — and do not include your name or email address.</p>
+        <p>SATWIP also queries third-party market data providers (including Yahoo Finance and Nasdaq) to retrieve share price and market capitalisation data. These requests include only ticker symbols and do not include your name or email address.</p>
         <p>The following table summarises what is sent to each third party and why:</p>
         <table>
           <thead>
@@ -72,7 +72,7 @@
               <td>To fetch market capitalisation as a fallback</td>
             </tr>
             <tr>
-              <td><strong>Supabase</strong> (hosted on AWS)</td>
+              <td><strong>Hudson Barry Research</strong></td>
               <td>Name, email, timestamp, App and disclaimer version</td>
               <td>Disclaimer acceptance log (section 2)</td>
             </tr>
@@ -83,7 +83,9 @@
         <h2>4. Information Stored on Your Device</h2>
         <p>All other data created or saved by SATWIP is stored locally on your device only, in the folder <code>C:\Users\&lt;you&gt;\.satwip\</code>. This includes:</p>
         <ul>
-          <li>Your name, email address, and account name</li>
+          <li>Your account name and email address</li>
+          <li>Your profile name(s)</li>
+          <li>Your SEC API Identity name and email (stored per profile; may differ from your account credentials)</li>
           <li>Notes, BUY/HOLD/SELL signals, and comments you write for individual companies</li>
           <li>Custom filter sets you save for reuse</li>
           <li>Tickers you have marked as dropped</li>
