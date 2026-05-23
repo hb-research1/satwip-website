@@ -131,6 +131,18 @@ footer .footer-links { margin-bottom: 8px; display: flex; justify-content: cente
 .policy-content ul { padding-left: 20px; }
 .policy-content a { color: var(--accent); }
 
+/* ===== Policy table ===== */
+.policy-content table {
+  width: 100%; border-collapse: collapse;
+  font-size: 0.88rem; margin: 16px 0 20px;
+}
+.policy-content th, .policy-content td {
+  border: 1px solid var(--border);
+  padding: 8px 12px; text-align: left; vertical-align: top;
+}
+.policy-content th { background: var(--bg-card); color: var(--text); font-weight: 600; }
+.policy-content td { color: var(--text-muted); }
+
 /* ===== Responsive ===== */
 @media (max-width: 600px) {
   .hero h1 { font-size: 2.2rem; }
