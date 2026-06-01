@@ -26,19 +26,22 @@
       <div class="policy-content">
 
         <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: May 23, 2026</p>
+        <p class="updated">Last updated: June 1, 2026</p>
 
         <p>This Privacy Policy describes how Hudson Barry Research ("we," "us," or "our"), developer of SATWIP (the "App"), handles information in connection with your use of the App. We are committed to protecting your privacy.</p>
 
         <h2>1. Information We Collect</h2>
-        <p>SATWIP collects a minimal amount of information, limited to one specific event described in section 2 below. In all other respects:</p>
+        <p>SATWIP collects a limited amount of personal information, as described in the sections below. In all other respects:</p>
         <ul>
-          <li>We do not require you to register or create an online account with us.</li>
           <li>We do not use tracking technologies such as cookies, analytics pixels, or telemetry beacons within the App.</li>
           <li>All screening criteria, saved results, and preferences are stored locally on your own device and are never transmitted to us.</li>
         </ul>
 
-        <h2>2. Disclaimer Acceptance Log</h2>
+        <h2>2. Email Verification</h2>
+        <p>Before using the App, you are required to verify your email address using a one-time code sent to that address. If you configure a different email address for your SEC API Identity, that address must also be verified separately.</p>
+        <p>During email verification, your email address is transmitted to <strong>Supabase, Inc.</strong> (our authentication service provider, hosted on AWS), which creates a persistent user record containing your email address and a timestamp. Supabase uses <strong>Resend, Inc.</strong> (an email delivery service) to send the verification code to your address; Resend receives your email address solely for that purpose. A session credential is stored locally on your device after successful verification so the App can re-authenticate you automatically at startup.</p>
+
+        <h2>3. Disclaimer Acceptance Log</h2>
         <p>The App displays a disclaimer that must be acknowledged before the App can be used. The first time each account accepts the disclaimer (and again if the disclaimer is updated), the following information is transmitted to and stored in our private database (hosted by Supabase on AWS):</p>
         <ul>
           <li>Your name and email address (as entered during App setup)</li>
@@ -47,10 +50,8 @@
         </ul>
         <p>This record is retained for compliance purposes and is not shared with any third party. The database is configured so that stored records cannot be read, modified, or deleted by any external party — only the developer has access. Data is transmitted over HTTPS.</p>
 
-        <h2>3. Data the App Fetches from Third Parties</h2>
-        <p>SATWIP queries the U.S. Securities and Exchange Commission's publicly available EDGAR API to retrieve financial filing data. As required by the SEC's fair-use policy, SATWIP sends the name and email address you configure as your SEC API Identity as a <code>User-Agent</code> header with each EDGAR request. Your SEC API Identity may be the same as your account name and email or different — you configure it separately in the App. No other personal information is transmitted to EDGAR.</p>
-        <p>SATWIP also queries third-party market data providers (including Yahoo Finance and Nasdaq) to retrieve share price and market capitalisation data. These requests include only ticker symbols and do not include your name or email address.</p>
-        <p>The following table summarises what is sent to each third party and why:</p>
+        <h2>4. Third-Party Services</h2>
+        <p>The following table summarises the third-party services that receive personal information from the App, and why. The name and email address you configure as your SEC API Identity are sent as a <code>User-Agent</code> header with each EDGAR request, as required by the SEC's fair-use policy; your SEC API Identity may be the same as your account name and email or different — you configure it separately in the App.</p>
         <table>
           <thead>
             <tr><th>Recipient</th><th>What is sent</th><th>Why</th></tr>
@@ -62,25 +63,26 @@
               <td>Required by the SEC's fair-use policy for API access</td>
             </tr>
             <tr>
-              <td><strong>Yahoo Finance</strong></td>
-              <td>Ticker symbols</td>
-              <td>To fetch share prices and market capitalisation</td>
+              <td><strong>Supabase</strong></td>
+              <td>Email address</td>
+              <td>Email verification (section 2); stores a user record in our authentication service</td>
             </tr>
             <tr>
-              <td><strong>Nasdaq</strong></td>
-              <td>Ticker symbols</td>
-              <td>To fetch market capitalisation as a fallback</td>
+              <td><strong>Resend</strong></td>
+              <td>Email address</td>
+              <td>Delivers the one-time verification code to your inbox</td>
             </tr>
             <tr>
               <td><strong>Hudson Barry Research</strong></td>
               <td>Name, email, timestamp, App and disclaimer version</td>
-              <td>Disclaimer acceptance log (section 2)</td>
+              <td>Disclaimer acceptance log (section 3)</td>
             </tr>
           </tbody>
         </table>
+        <p>SATWIP also queries Yahoo Finance and Nasdaq to retrieve share price and market capitalisation data. These requests include only ticker symbols and no personal information.</p>
         <p>The SEC's own privacy and data policies govern the EDGAR API. You can review those at <a href="https://www.sec.gov/privacy" target="_blank" rel="noopener">www.sec.gov/privacy</a>.</p>
 
-        <h2>4. Information Stored on Your Device</h2>
+        <h2>5. Information Stored on Your Device</h2>
         <p>All other data created or saved by SATWIP is stored locally on your device only, in the folder <code>C:\Users\&lt;you&gt;\.satwip\</code>. This includes:</p>
         <ul>
           <li>Your account name and email address</li>
@@ -92,7 +94,7 @@
         </ul>
         <p>Except as described above, none of this information is uploaded, synced, or transmitted to any party.</p>
 
-        <h2>5. Information Not Collected</h2>
+        <h2>6. Information Not Collected</h2>
         <p>SATWIP does not collect or transmit:</p>
         <ul>
           <li>Usage analytics or telemetry</li>
@@ -103,16 +105,16 @@
           <li>Payment information</li>
         </ul>
 
-        <h2>6. Microsoft Store</h2>
+        <h2>7. Microsoft Store</h2>
         <p>SATWIP is available on the Microsoft Store. Microsoft may collect diagnostic, usage, and purchase information as part of their platform. This data is collected by Microsoft, not by us, and is governed by Microsoft's own privacy policies.</p>
 
-        <h2>7. Children's Privacy</h2>
+        <h2>8. Children's Privacy</h2>
         <p>SATWIP is not directed at children under the age of 13, and we do not knowingly collect any information from children.</p>
 
-        <h2>8. Changes to This Policy</h2>
+        <h2>9. Changes to This Policy</h2>
         <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last updated" date at the top of this page. We encourage you to review this page periodically. Continued use of the App after any changes constitutes your acceptance of the updated policy.</p>
 
-        <h2>9. Contact</h2>
+        <h2>10. Contact</h2>
         <p>For information about investment risk, data accuracy, and liability limitations, see the <a href="index.html#disclaimer">Disclaimer</a> on the SATWIP home page.</p>
 
         <p>If you have any questions about this Privacy Policy, you may contact us at:</p>
