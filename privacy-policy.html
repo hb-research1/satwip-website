@@ -27,7 +27,7 @@
       <div class="policy-content">
 
         <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: June 11, 2026</p>
+        <p class="updated">Last updated: June 26, 2026</p>
 
         <p>This Privacy Policy describes how HUDSON BARRY RESEARCH LLC ("we," "us," or "our"), developer of SATWIP (the "App"), handles information in connection with your use of the App. We are committed to protecting your privacy.</p>
 
@@ -40,10 +40,10 @@
 
         <h2>2. Email Verification</h2>
         <p>Before using the App, you are required to verify your email address using a one-time code sent to that address. If you configure a different email address for your SEC API Identity, that address must also be verified separately.</p>
-        <p>During email verification, your email address is transmitted to <strong>Supabase, Inc.</strong> (our authentication service provider, hosted on AWS), which creates a persistent user record containing your email address and a timestamp. Supabase uses <strong>Resend, Inc.</strong> (an email delivery service) to send the verification code to your address; Resend receives your email address solely for that purpose. A session credential is stored locally on your device after successful verification so the App can re-authenticate you automatically at startup.</p>
+        <p>During email verification, your email address is transmitted to our authentication service, which creates a persistent user record containing your email address and a timestamp. Our authentication service uses a third-party email delivery provider to send the verification code to your address; that provider receives your email address solely for that purpose. A session credential is stored locally on your device after successful verification so the App can re-authenticate you automatically at startup.</p>
 
         <h2>3. Disclaimer Acceptance Log</h2>
-        <p>The App displays a disclaimer that must be acknowledged before the App can be used. The first time each account accepts the disclaimer (and again if the disclaimer is updated), the following information is transmitted to and stored in our private database (hosted by Supabase on AWS):</p>
+        <p>The App displays a disclaimer that must be acknowledged before the App can be used. The first time each account accepts the disclaimer (and again if the disclaimer is updated), the following information is transmitted to and stored in our private database:</p>
         <ul>
           <li>Your name and email address (as entered during App setup)</li>
           <li>The date and time of acceptance</li>
@@ -61,15 +61,15 @@
             <tr>
               <td><strong>SEC EDGAR</strong></td>
               <td>Your SEC API Identity name and email (as a <code>User-Agent</code> header); company CIK numbers</td>
-              <td>Required by the SEC's fair-use policy for API access</td>
+              <td>Required by the SEC's fair-use policy for API access (Direct Fetch mode only — see note below)</td>
             </tr>
             <tr>
-              <td><strong>Supabase</strong></td>
+              <td><strong>Our authentication service</strong></td>
               <td>Email address</td>
-              <td>Email verification (section 2); stores a user record in our authentication service</td>
+              <td>Email verification (section 2); stores a persistent user record</td>
             </tr>
             <tr>
-              <td><strong>Resend</strong></td>
+              <td><strong>Our email delivery provider</strong></td>
               <td>Email address</td>
               <td>Delivers the one-time verification code to your inbox</td>
             </tr>
@@ -80,7 +80,8 @@
             </tr>
           </tbody>
         </table>
-        <p>SATWIP also queries Yahoo Finance and Nasdaq to retrieve share price and market capitalisation data. These requests include only ticker symbols and no personal identifying information. With SATWIP Premium, the Fast Fetch feature downloads pre-computed screening data from our database (hosted by Supabase on AWS) and, if that database is unreachable, from a backup copy hosted by GitHub, Inc. These requests retrieve data only and include no personal identifying information. In addition, your device's IP address is inherently transmitted to every service the App connects to as a technical requirement of internet communication.</p>
+        <p><strong>Note on Direct Fetch vs. Fast Fetch:</strong> Your SEC API Identity name and email are transmitted to SEC EDGAR only when using Direct Fetch mode. When using Fast Fetch (Premium), the App downloads pre-computed screening data from our own server and does not contact SEC EDGAR directly, so your SEC API Identity is not transmitted.</p>
+        <p>SATWIP also queries Yahoo Finance and Nasdaq to retrieve share price and market capitalisation data. These requests include only ticker symbols and no personal identifying information. With SATWIP Premium, the Fast Fetch feature downloads pre-computed screening data from our server and, if that server is unreachable, from a backup snapshot. These requests retrieve data only and include no personal identifying information. In addition, your device's IP address is inherently transmitted to every service the App connects to as a technical requirement of internet communication.</p>
         <p>The SEC's own privacy and data policies govern the EDGAR API. You can review those at <a href="https://www.sec.gov/privacy" target="_blank" rel="noopener">www.sec.gov/privacy</a>.</p>
 
         <h2>5. Information Stored on Your Device</h2>
@@ -113,7 +114,7 @@
         </ul>
 
         <h2>7. App Stores</h2>
-        <p>SATWIP is available on the Microsoft Store and is planned to be released on the Apple App Store. Microsoft and Apple may each collect diagnostic, usage, and purchase information as part of their respective platforms. This data is collected by Microsoft or Apple, not by us, and is governed by their own privacy policies.</p>
+        <p>SATWIP is planned to be released on the Microsoft Store and on the Apple Mac App Store. Microsoft and Apple may each collect diagnostic, usage, and purchase information as part of their respective platforms. This data is collected by Microsoft or Apple, not by us, and is governed by their own privacy policies.</p>
 
         <h2>8. Children's Privacy</h2>
         <p>SATWIP is not directed at children under the age of 13, and we do not knowingly collect any information from children.</p>
@@ -124,9 +125,8 @@
         <h2>10. Contact</h2>
         <p>For information about investment risk, data accuracy, and liability limitations, see the <a href="index.html#disclaimer">Disclaimer</a> on the SATWIP home page.</p>
 
-        <p>If you have any questions about this Privacy Policy, you may contact us at:</p>
         <p><strong>HUDSON BARRY RESEARCH LLC</strong><br>
-        <a href="mailto:support@satwip.com">support@satwip.com</a></p>
+        To contact us, please use the contact information provided in Help &gt; About SATWIP within the App, or visit <a href="index.html">satwip.com</a>.</p>
 
       </div>
     </div>
