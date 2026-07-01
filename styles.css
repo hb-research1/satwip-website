@@ -73,7 +73,7 @@ nav .container { display: flex; align-items: center; justify-content: space-betw
 .btn-store svg { flex-shrink: 0; }
 .coming-soon {
   display: block;
-  margin-top: 18px;
+  margin-top: 32px;
   color: var(--text-muted);
   font-size: 1.1rem; font-weight: 600;
   letter-spacing: 0.5px;
