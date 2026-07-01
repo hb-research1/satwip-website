@@ -71,7 +71,7 @@ nav .container { display: flex; align-items: center; justify-content: space-betw
   transform: scale(1.04);
 }
 .btn-store svg { flex-shrink: 0; }
-.coming-soon {
+.hero .coming-soon {
   display: block;
   margin-top: 32px;
   color: var(--text-muted);
