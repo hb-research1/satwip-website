@@ -54,6 +54,14 @@ nav .container { display: flex; align-items: center; justify-content: space-betw
 .hero .tagline { font-size: 1.4rem; font-weight: 600; color: var(--text); margin-bottom: 24px; letter-spacing: 0.5px; }
 .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 560px; margin: 0 auto 36px; }
 
+.store-badges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 8px auto 36px;
+}
 .btn-store-badge {
   display: inline-block;
   transition: transform 0.15s ease;
