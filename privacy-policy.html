@@ -41,7 +41,7 @@
       <div class="policy-content">
 
         <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: August 12, 2026</p>
+        <p class="updated">Last updated: September 2, 2026</p>
 
         <p>This Privacy Policy describes how HUDSON BARRY RESEARCH LLC ("we," "us," or "our"), developer of SATWIP (the "App"), handles information in connection with your use of the App. We are committed to protecting your privacy.</p>
 
@@ -75,7 +75,7 @@
             <tr>
               <td><strong>SEC EDGAR</strong></td>
               <td>Your SEC API Identity name and email (as a <code>User-Agent</code> header); company CIK numbers</td>
-              <td>Required by the SEC's fair-use policy for API access (Direct Fetch mode only — see note below)</td>
+              <td>Required by the SEC's fair-use policy for API access (see note below)</td>
             </tr>
             <tr>
               <td><strong>Our authentication service</strong></td>
@@ -94,8 +94,8 @@
             </tr>
           </tbody>
         </table>
-        <p><strong>Note on Direct Fetch vs. Fast Fetch:</strong> Your SEC API Identity name and email are transmitted to SEC EDGAR only when using Direct Fetch mode. When using Fast Fetch (Premium), the App downloads pre-computed screening data from our own server and does not contact SEC EDGAR directly, so your SEC API Identity is not transmitted.</p>
-        <p>SATWIP also queries Yahoo Finance and Nasdaq to retrieve share price and market capitalisation data. These requests include only ticker symbols and no personal identifying information. With SATWIP Premium, the Fast Fetch feature downloads pre-computed screening data from our server and, if that server is unreachable, from a backup snapshot. These requests retrieve data only and include no personal identifying information. In addition, your device's IP address is inherently transmitted to every service the App connects to as a technical requirement of internet communication.</p>
+        <p><strong>Note on Direct Fetch vs. Fast Fetch:</strong> In Direct Fetch mode, every screening request is sent to SEC EDGAR with your SEC API Identity. In Fast Fetch mode (Premium), the screening data itself is downloaded from our own server, so the screen does not contact SEC EDGAR. A few features contact SEC EDGAR directly in either mode and therefore transmit your SEC API Identity: loading the ticker suggestion list, Company Details &gt; Load Financials, and looking up a company's CIK after importing a CSV.</p>
+        <p>SATWIP also queries Yahoo Finance and Nasdaq to retrieve share price and market capitalisation data, and downloads Nasdaq Trader's public symbol directories to identify security types. These requests include only ticker symbols (or no query at all) and no personal identifying information. With SATWIP Premium, the Fast Fetch feature downloads pre-computed screening data from our server and, if that server is unreachable, from a backup snapshot, and Company Details retrieves a company's business description from our server. These requests identify at most the company being looked up and include no personal identifying information. In addition, your device's IP address is inherently transmitted to every service the App connects to as a technical requirement of internet communication.</p>
         <p>The SEC's own privacy and data policies govern the EDGAR API. You can review those at <a href="https://www.sec.gov/privacy" target="_blank" rel="noopener">www.sec.gov/privacy</a>.</p>
 
         <h2>5. Information Stored on Your Device</h2>
@@ -112,8 +112,10 @@
           <li>Notes, BUY/HOLD/SELL signals, and comments you write for individual companies</li>
           <li>Custom filter sets you save for reuse</li>
           <li>Tickers you have marked as dropped</li>
+          <li>A session credential (refresh token) that lets the App re-authenticate you automatically at startup (see section 2)</li>
+          <li>The disclaimer text you accepted and its version number</li>
         </ul>
-        <p>All files SATWIP stores in this folder are encrypted on disk, as are account files exported with the Premium export feature. CSV files you explicitly save from the App (screen results, financials, capital-allocation tables) are ordinary unencrypted files written to the location you choose.</p>
+        <p>Your account and settings files in this folder are encrypted on disk, as are account files exported with the Premium export feature. One file is stored unencrypted: a cache of public market symbol data (<code>security_names.json</code> — ticker symbols and security names downloaded from Nasdaq Trader) that contains no personal information. CSV files you explicitly save from the App (screen results, financials, capital-allocation tables) are ordinary unencrypted files written to the location you choose.</p>
         <p>Except as described above, none of this information is uploaded, synced, or transmitted to any party.</p>
 
         <h2>6. Information Not Collected</h2>
